@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220714 00:15:41.221" rpa="false" schemaversion="3">
+<suite id="s1" name="automationTestes" source="C:\Users\CHRISTIAN\Desktop\AutomationPractice - Equipe 2\automationTestes.robot">
+<test id="s1-t1" name="Scenario Login com usuário inexistente" line="10">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220714 00:15:41.897" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220714 00:15:41.896" endtime="20220714 00:15:46.025"/>
+</kw>
+<kw name="Acessar a home page do site automationpractice.com" library="automationResources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220714 00:15:46.028" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20220714 00:15:46.027" endtime="20220714 00:15:51.185"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220714 00:15:51.185" endtime="20220714 00:15:51.443"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220714 00:15:53.453" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220714 00:15:51.444" endtime="20220714 00:15:53.453"/>
+</kw>
+<status status="PASS" starttime="20220714 00:15:46.026" endtime="20220714 00:15:53.453"/>
+</kw>
+<kw name="Entrar na opção Sign in no cabeçalho da página" library="automationResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${SIGNIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220714 00:15:53.459" level="INFO">Clicking element '//a[@class='login'][contains(.,'Sign in')]'.</msg>
+<status status="PASS" starttime="20220714 00:15:53.455" endtime="20220714 00:15:57.366"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULOPAGINALOGIN}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220714 00:15:57.374" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20220714 00:15:57.366" endtime="20220714 00:15:57.375"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>locator=${VALIDAPAGINALOGIN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220714 00:15:57.396" level="INFO">Current page contains element '//h1[@class='page-heading'][contains(.,'Authentication')]'.</msg>
+<status status="PASS" starttime="20220714 00:15:57.375" endtime="20220714 00:15:57.397"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>locator=${VALIDAPAGINALOGIN2}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220714 00:15:57.414" level="INFO">Current page contains element '//h3[@class='page-subheading'][contains(.,'Create an account')]'.</msg>
+<status status="PASS" starttime="20220714 00:15:57.397" endtime="20220714 00:15:57.414"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220714 00:15:59.418" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220714 00:15:57.414" endtime="20220714 00:15:59.418"/>
+</kw>
+<status status="PASS" starttime="20220714 00:15:53.455" endtime="20220714 00:15:59.419"/>
+</kw>
+<kw name="Digitar o email não cadastrado no campo Email address" library="automationResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220714 00:15:59.421" endtime="20220714 00:15:59.474"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${EMAILNAOCADASTRADO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220714 00:15:59.475" level="INFO">Typing text 'christian00000@bloob.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220714 00:15:59.474" endtime="20220714 00:15:59.791"/>
+</kw>
+<status status="PASS" starttime="20220714 00:15:59.419" endtime="20220714 00:15:59.792"/>
+</kw>
+<kw name="Digitar a senha não cadastrada no campo Password" library="automationResources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=passwd</arg>
+<arg>${SENHANAOCADASTRADA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220714 00:15:59.795" level="INFO">Typing text '0000000' into text field 'id=passwd'.</msg>
+<status status="PASS" starttime="20220714 00:15:59.794" endtime="20220714 00:16:00.201"/>
+</kw>
+<status status="PASS" starttime="20220714 00:15:59.793" endtime="20220714 00:16:00.201"/>
+</kw>
+<kw name="Clicar no botão Sign in" library="automationResources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=SubmitLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220714 00:16:00.204" level="INFO">Clicking button 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220714 00:16:00.203" endtime="20220714 00:16:01.633"/>
+</kw>
+<status status="PASS" starttime="20220714 00:16:00.202" endtime="20220714 00:16:01.634"/>
+</kw>
+<kw name="Verificação de falha no login" library="automationResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${VALIDAAUTENTICACAO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220714 00:16:01.636" endtime="20220714 00:16:01.723"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULOPAGINALOGIN}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220714 00:16:01.732" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20220714 00:16:01.724" endtime="20220714 00:16:01.732"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>locator=${VALIDAAUTENTICACAO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220714 00:16:01.749" level="INFO">Current page contains element '//li[contains(.,'Authentication failed.')]'.</msg>
+<status status="PASS" starttime="20220714 00:16:01.733" endtime="20220714 00:16:01.749"/>
+</kw>
+<status status="PASS" starttime="20220714 00:16:01.635" endtime="20220714 00:16:01.749"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220714 00:16:01.751" endtime="20220714 00:16:05.244"/>
+</kw>
+<status status="PASS" starttime="20220714 00:15:41.872" endtime="20220714 00:16:05.244"/>
+</test>
+<status status="PASS" starttime="20220714 00:15:41.225" endtime="20220714 00:16:05.247"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="automationTestes">automationTestes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
