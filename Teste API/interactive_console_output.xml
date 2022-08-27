@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220827 18:20:52.286" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\CHRISTIAN\.vscode\extensions\robocorp.robotframework-lsp-1.1.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="GET">
+<var>${response}</var>
+<arg>${URL}</arg>
+<arg>params=paras=100</arg>
+<arg>expected_status=200</arg>
+<msg timestamp="20220827 18:20:55.898" level="FAIL">No keyword with name 'GET' found. Did you mean:
+    BuiltIn.Get Time</msg>
+<status status="FAIL" starttime="20220827 18:20:55.897" endtime="20220827 18:20:55.899"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220827 18:20:55.902" endtime="20220827 18:20:55.903"/>
+</kw>
+<status status="PASS" starttime="20220827 18:20:52.400" endtime="20220827 18:20:56.317"/>
+</kw>
+<status status="PASS" starttime="20220827 18:20:52.399" endtime="20220827 18:20:56.318"/>
+</test>
+<status status="PASS" starttime="20220827 18:20:52.293" endtime="20220827 18:20:56.323"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
